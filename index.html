@@ -7,18 +7,8 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="myapp">{{ message }}</div>
+    <script src="app.js"></script>
 
-    <script>
-    const { createApp } = Vue
-
-    createApp({
-        data() {
-        return {
-            message: 'Hello Vue!'
-        }
-        }
-    }).mount('#app')
-    </script>
 </body>
 </html>
