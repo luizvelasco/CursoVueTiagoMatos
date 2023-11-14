@@ -1,17 +1,23 @@
 <template>
   <div>
-    <EventosDom />
+    <!-- <EventosDom /> -->
     <!-- <FormulariosTeste /> -->
+    <!-- <PropriedadeComputada /> -->
+    <ObservadoresVue />
   </div>
 </template>
 
 <script>
+import ObservadoresVue from './components/ObservadoresVue.vue'
+// import PropriedadeComputada from './components/PropriedadeComputada.vue'
 // import FormulariosTeste from './components/FormulariosTeste.vue'
-import EventosDom from './components/EventosDom.vue'
+// import EventosDom from './components/EventosDom.vue'
 
 export default {
+  components: { ObservadoresVue },
+  // components: { PropriedadeComputada },
   // components: { FormulariosTeste },
-   components: { EventosDom }
+  //  components: { EventosDom }
   
   
 }
