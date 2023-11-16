@@ -4,19 +4,28 @@
     <!-- <FormulariosTeste /> -->
     <!-- <PropriedadeComputada /> -->
     <!-- <ObservadoresVue /> -->
-    <LifeCycle />
+    <!-- <LifeCycle /> -->
+    <SlotComponents>
+     
+      <template v-slot:description>
+        <p>dfsdf</p>
+      </template>
+      Content do header - menu
+    </SlotComponents>
   </div>
 </template>
 
 <script>
-import LifeCycle from './components/LifeCycle.vue'
+import SlotComponents from './components/SlotComponents.vue'
+// import LifeCycle from './components/LifeCycle.vue'
 // import ObservadoresVue from './components/ObservadoresVue.vue'
 // import PropriedadeComputada from './components/PropriedadeComputada.vue'
 // import FormulariosTeste from './components/FormulariosTeste.vue'
 // import EventosDom from './components/EventosDom.vue'
 
 export default {
-  components: { LifeCycle },
+  components: { SlotComponents },
+  // components: { LifeCycle },
   // components: { ObservadoresVue },
   // components: { PropriedadeComputada },
   // components: { FormulariosTeste },
