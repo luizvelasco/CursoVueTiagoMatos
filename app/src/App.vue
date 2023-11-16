@@ -5,18 +5,23 @@
     <!-- <PropriedadeComputada /> -->
     <!-- <ObservadoresVue /> -->
     <!-- <LifeCycle /> -->
-    <SlotComponents>
+    <!-- <SlotComponents>
      
       <template v-slot:description>
         <p>dfsdf</p>
       </template>
       Content do header - menu
-    </SlotComponents>
+    </SlotComponents> -->
+    <div class="card">
+            <p>teste</p>
+        </div>
+    <BaseCard />
   </div>
 </template>
 
 <script>
-import SlotComponents from './components/SlotComponents.vue'
+import BaseCard from './components/BaseCard.vue'
+// import SlotComponents from './components/SlotComponents.vue'
 // import LifeCycle from './components/LifeCycle.vue'
 // import ObservadoresVue from './components/ObservadoresVue.vue'
 // import PropriedadeComputada from './components/PropriedadeComputada.vue'
@@ -24,7 +29,8 @@ import SlotComponents from './components/SlotComponents.vue'
 // import EventosDom from './components/EventosDom.vue'
 
 export default {
-  components: { SlotComponents },
+  components: { BaseCard },
+  // components: { SlotComponents },
   // components: { LifeCycle },
   // components: { ObservadoresVue },
   // components: { PropriedadeComputada },
