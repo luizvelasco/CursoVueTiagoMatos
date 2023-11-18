@@ -1,0 +1,48 @@
+<template>
+    <div :class="baseClass">
+       <slot />
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'BaseAlert',
+    data() {
+        return {
+
+        }
+    },
+    props: {
+        variant: {
+            type: String,
+            default: ''
+        },
+    },
+    computed: {
+        baseClass(){
+            return [
+                'alert',
+                this.variant ? `alert-${this.variant}` : ''
+            ]
+        }
+    }
+}
+</script>
+
+<style scoped>
+    .alert {
+        padding: 5px;
+        border-radius: 6px;
+        color: gray;
+        background: #ddd;
+    }
+    .alert-success {
+        background: #42b983;
+        color: #fff;
+    }
+
+    .alert-danger {
+        background: red;
+        color: #fff;
+    }
+</style>

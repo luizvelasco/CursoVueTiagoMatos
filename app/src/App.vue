@@ -12,15 +12,19 @@
       </template>
       Content do header - menu
     </SlotComponents> -->
-    <div class="card">
+    <!-- <div class="card">
             <p>teste</p>
         </div>
-    <BaseCard />
+    <BaseCard /> -->
+    <BaseAlert :variant="variant"> 
+    {{text}}
+    </BaseAlert>
   </div>
 </template>
 
 <script>
-import BaseCard from './components/BaseCard.vue'
+import BaseAlert from './components/BaseAlert.vue'
+// import BaseCard from './components/BaseCard.vue'
 // import SlotComponents from './components/SlotComponents.vue'
 // import LifeCycle from './components/LifeCycle.vue'
 // import ObservadoresVue from './components/ObservadoresVue.vue'
@@ -29,14 +33,21 @@ import BaseCard from './components/BaseCard.vue'
 // import EventosDom from './components/EventosDom.vue'
 
 export default {
-  components: { BaseCard },
+  name: 'App',
+  components: { BaseAlert },
+  // components: { BaseCard, BaseAlert },
   // components: { SlotComponents },
   // components: { LifeCycle },
   // components: { ObservadoresVue },
   // components: { PropriedadeComputada },
   // components: { FormulariosTeste },
   //  components: { EventosDom }
-  
+  data(){
+    return {
+      variant: '',
+      text: 'Seu formulário foi enviado'
+    }
+  }
   
 }
 </script>
