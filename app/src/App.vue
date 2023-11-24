@@ -16,8 +16,12 @@
             <p>teste</p>
         </div>
     <BaseCard /> -->
-    <BaseAlert :variant="variant"> 
-    {{text}}
+    <BaseAlert 
+      v-if="showAlert"
+      :variant="variant" 
+      @close="onClose()"
+    > 
+      {{text}}
     </BaseAlert>
   </div>
 </template>
@@ -44,8 +48,15 @@ export default {
   //  components: { EventosDom }
   data(){
     return {
-      variant: '',
+      showAlert: true,
+      variant: 'success',
       text: 'Seu formulário foi enviado'
+    }
+  },
+  methods: {
+    onClose(){
+      this.showAlert = false
+      console.log('on close');
     }
   }
   
